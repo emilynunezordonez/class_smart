@@ -24,7 +24,6 @@ export function EmailVerification() {
 
   return <div className='text-black text-xl font-bold'>
     <h1>{status}</h1>
-    <button  className='bg-[#0FA0CC] p-3 rounded-lg w-full hover:bg-[#0c88ad] hover:cursor-pointer transition duration-300' onClick={()=>navigate('/client')}>Volver al Comercio</button>
     </div>;
 }
 
