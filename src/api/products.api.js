@@ -1,6 +1,6 @@
 import axios from 'axios'
 const productoApi= axios.create({
-    baseURL:'http://localhost:8000/api/'
+    baseURL:'https://proyecto-desarrollo.onrender.com/api/'
 })
 
 export const getAllProducts = () => productoApi.get("productos/")

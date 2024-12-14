@@ -1,6 +1,6 @@
 import axios from 'axios'
 const pedidosApi= axios.create({
-    baseURL:'http://localhost:8000/api/'
+    baseURL:'https://proyecto-desarrollo.onrender.com/api/'
 })
 
 export const productosMasVendidos=()=>pedidosApi.get('productos_mas_vendidos',{headers: {
