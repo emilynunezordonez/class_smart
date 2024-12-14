@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/verify_Email/:param*", "destination": "/verify_Email/:token" },
+      { "source": "/client", "destination": "/client" }
+    ]
+  }
