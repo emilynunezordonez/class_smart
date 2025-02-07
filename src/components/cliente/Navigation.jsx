@@ -183,7 +183,7 @@ export function Navigation() {
           <button
           className="text-xl font-bold hover:scale-110 transition-transform shadow-lg duration-300 ease-in-out"
           onClick={() => {
-            navigate('/login')
+            navigate('/register-user')
           }}
         >
         Regístrate
