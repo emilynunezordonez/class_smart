@@ -1,39 +1,38 @@
 import axios from 'axios'
-const pedidosApi= axios.create({
-    baseURL:'https://proyecto-desarrollo.onrender.com/api/'
-})
-
-export const productosMasVendidos=()=>pedidosApi.get('productos_mas_vendidos',{headers: {
+const dashboardApi = axios.create({
+    baseURL: import.meta.env.VITE_API_URL
+});
+export const productosMasVendidos=()=>dashboardApi.get('api/productos_mas_vendidos',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 
-export const indicadoresUsuario=()=>pedidosApi.get('indicadores_por_usuario',{headers: {
+export const indicadoresUsuario=()=>dashboardApi.get('api/indicadores_por_usuario',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 
-export const ventasDiarias=()=>pedidosApi.get('ventas_diarias',{headers: {
+export const ventasDiarias=()=>dashboardApi.get('api/ventas_diarias',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 
-export const metodosPMasUtilizados=()=>pedidosApi.get('metodos_pago_mas_utilizados',{headers: {
+export const metodosPMasUtilizados=()=>dashboardApi.get('api/metodos_pago_mas_utilizados',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 
-export const tablaProductosMasVendidos=()=>pedidosApi.get('productosMasVendidos',{headers: {
+export const tablaProductosMasVendidos=()=>dashboardApi.get('api/productosMasVendidos',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 
-export const  valorTotalVentas=()=>pedidosApi.get('valor_total_ventas',{headers: {
+export const  valorTotalVentas=()=>dashboardApi.get('api/valor_total_ventas',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 
-export const  estadosPedidos=()=>pedidosApi.get('pedidos_por_estado',{headers: {
+export const  estadosPedidos=()=>dashboardApi.get('api/pedidos_por_estado',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})

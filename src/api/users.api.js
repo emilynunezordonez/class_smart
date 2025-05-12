@@ -2,7 +2,7 @@
 
 
 const UserApi = axios.create({
-    baseURL: 'https://proyecto-desarrollo.onrender.com',
+    baseURL: import.meta.env.VITE_API_URL
 });
 
 
@@ -14,7 +14,7 @@ export const getAllUsers = () => UserApi.get("/api/usuarios/",{headers: {
 
 
 export const registerUser=(user)=>{
-    return UserApi.post("/api/usuarios/register/",user, {headers: {
+    return UserApi.post("/api/usuarios/",user, {headers: {
         'Content-Type': 'application/json',
         'Authorization': `Token ${localStorage.getItem('authToken')}`
         
