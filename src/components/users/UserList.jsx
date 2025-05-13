@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllUsers,searchUsers } from "../../api/users.api"
 import { UserCard } from "./UserCard"
+import React from 'react';
 export function UserList({ searchCriteria, searchValue }) {
 
   const [users, setUsers] = useState([])
