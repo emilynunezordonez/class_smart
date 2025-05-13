@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for ProductCard.jsx</title>
+    <title>Code coverage report for CategoriaCard.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> ProductCard.jsx</h1>
+        <h1><a href="index.html">All files</a> CategoriaCard.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -32,7 +32,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
@@ -84,25 +84,14 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,57 +105,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useNavigate } from "react-router-dom";
-import React from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 &nbsp;
-export function ProductCard({ product }) {
-  const navigate = useNavigate();
-&nbsp;
-  return (
-    &lt;div
-      className="bg-white p-3 hover:bg-gray-200 transition duration-300 ease-in-out
+export function CategoriaCard({categoria}) {
+    
+        const navigate=useNavigate();
+        
+        return (
+            &lt;div className="bg-gray-200 p-3 hover:bg-gray-300 transition duration-300 ease-in-out
         hover:cursor-pointer"
-      onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        navigate("/product-create/" + product.id);</span>
-      }}
-    &gt;
-      {product.foto_producto &amp;&amp; (
-        &lt;img
-          src={product.foto_producto}
-          alt={product.nombre}
-          className="w-32 h-[120px] object-cover mb-3 rounded-md"
-        /&gt;
-      )}
-      &lt;h1 className="font-bold uppercase text-black"&gt;{product.nombre}&lt;/h1&gt;
-      &lt;p className="text-black"&gt;${product.precio}&lt;/p&gt;
-      &lt;p className="text-black opacity-40"&gt;
-        Disponibles: {product.cantidad_producto}
-      &lt;/p&gt;
-      &lt;p className="text-black opacity-40"&gt;
-        Descripción: {product.descripcion}
-      &lt;/p&gt;
-    &lt;/div&gt;
-  );
-}
-&nbsp;</pre></td></tr></table></pre>
+            onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;{
+<span class="cstat-no" title="statement not covered" >                navigate('/categoriasForm/'+categoria.id)</span>
+            }}
+&nbsp;
+            &gt;
+                &lt;div className="flex justify-center items-center"&gt;
+                    &lt;h1 className="font-bold uppercase"&gt;&lt;strong&gt;{categoria.nombre_categoria}&lt;/strong&gt;&lt;/h1&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+        );
+    }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-13T04:43:10.594Z
+                at 2025-05-13T05:02:19.565Z
             </div>
         <script src="prettify.js"></script>
         <script>
