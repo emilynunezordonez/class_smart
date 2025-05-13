@@ -74,4 +74,23 @@ describe("ProductCard", () => {
       screen.getByText(`Descripción: ${mockProduct.descripcion}`)
     ).toBeInTheDocument();
   });
+
+  test("navega al hacer clic en la tarjeta del producto", () => {
+    const mockNavigate = jest.fn();
+    useNavigate.mockReturnValue(mockNavigate); // Usa el mock
+
+    render(
+      <MemoryRouter>
+        <ProductCard product={mockProduct} />
+      </MemoryRouter>
+    );
+
+    // Simula clic en el contenedor principal (que tiene el onClick)
+    const card = screen.getByText(mockProduct.nombre).closest("div");
+    fireEvent.click(card);
+
+    expect(mockNavigate).toHaveBeenCalledWith("/product-create/1");
+  });
+
+
 });
