@@ -1,3 +1,4 @@
+import React from "react"
 import { useEffect, useState } from "react"
 import { getAllProducts,searchProducts } from "../../api/products.api"
 import { ProductCard } from "./ProductCard"
@@ -8,10 +9,6 @@ export function ProductList({ searchCriteria, searchValue }) {
   useEffect(() => {
     async function loadProducts() {
       try {
-
-        
-
-
         if (searchCriteria!=undefined && searchValue!=undefined) {
           
           const res = await searchProducts(searchCriteria,searchValue)
