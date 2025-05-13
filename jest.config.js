@@ -1,0 +1,1 @@
+export const setupFilesAfterEnv = ['<rootDir>/jest.setup.js'];
