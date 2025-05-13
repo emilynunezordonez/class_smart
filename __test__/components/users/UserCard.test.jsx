@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter, useNavigate } from 'react-router-dom';
 import { UserCard } from '../../../src/components/users/UserCard'; // Ajusta la ruta según tu estructura
