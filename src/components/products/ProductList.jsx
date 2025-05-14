@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react"
 import { getAllProducts,searchProducts } from "../../api/products.api"
 import { ProductCard } from "./ProductCard"
