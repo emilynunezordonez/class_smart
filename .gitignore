@@ -28,6 +28,11 @@ dist-ssr
 # coverage/*
 # coverage
 
+# ignore coverage except Icov.info
+coverage/icov-report/*
+coverage/clover.xml
+coverage/coverage-final.json
+
 # env
 .env
 .env.*
