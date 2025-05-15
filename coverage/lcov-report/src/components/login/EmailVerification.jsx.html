@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -99,24 +99,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,25 +127,25 @@ import { authService } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 &nbsp;
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >EmailVerification(</span>) {
-  const { token } = <span class="cstat-no" title="statement not covered" >useParams();</span>
-  const [status, setStatus] = <span class="cstat-no" title="statement not covered" >useState('Verificando...');</span>
-  const navigate=<span class="cstat-no" title="statement not covered" >useNavigate()</span>
+export function EmailVerification() {
+  const { token } = useParams();
+  const [status, setStatus] = useState('Verificando...');
+  const navigate=useNavigate()
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-    const verifyToken = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        await authService.verifyEmail(token);</span>
-<span class="cstat-no" title="statement not covered" >        setStatus('Email verificado exitosamente');</span>
+  useEffect(() =&gt; {
+    const verifyToken = async () =&gt; {
+      try {
+        await authService.verifyEmail(token);
+        setStatus('Email verificado exitosamente');
       } catch (error) {
-<span class="cstat-no" title="statement not covered" >        setStatus('Error en la verificación');</span>
+        setStatus('Error en la verificación');
       }
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    verifyToken();</span>
+    verifyToken();
   }, [token]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return &lt;div className='text-black text-xl font-bold'&gt;</span>
+  return &lt;div className='text-black text-xl font-bold'&gt;
     &lt;h1&gt;{status}&lt;/h1&gt;
     &lt;/div&gt;;
 }
@@ -157,7 +157,7 @@ export function <span class="fstat-no" title="function not covered" >EmailVerifi
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-14T23:01:20.801Z
+                at 2025-05-15T06:26:45.914Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

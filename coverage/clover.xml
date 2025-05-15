@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1747263680876" clover="3.2.0">
-  <project timestamp="1747263680876" name="All files">
-    <metrics statements="984" coveredstatements="59" conditionals="187" coveredconditionals="10" methods="354" coveredmethods="24" elements="1525" coveredelements="93" complexity="0" loc="984" ncloc="984" packages="17" files="58" classes="58"/>
+<coverage generated="1747290406226" clover="3.2.0">
+  <project timestamp="1747290406226" name="All files">
+    <metrics statements="993" coveredstatements="89" conditionals="187" coveredconditionals="16" methods="354" coveredmethods="30" elements="1534" coveredelements="135" complexity="0" loc="993" ncloc="993" packages="17" files="58" classes="58"/>
     <package name="src">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="App.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/App.jsx">
+      <file name="App.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\App.jsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="33" count="0" type="stmt"/>
       </file>
-      <file name="main.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/main.jsx">
+      <file name="main.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\main.jsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.api">
-      <metrics statements="60" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="46" coveredmethods="0"/>
-      <file name="categories.api.js" path="/home/paelsam/Documents/DSII/class_smart/src/api/categories.api.js">
+      <metrics statements="69" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="46" coveredmethods="0"/>
+      <file name="categories.api.js" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\api\categories.api.js">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -27,7 +27,7 @@
         <line num="28" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
       </file>
-      <file name="dashboard.api.js" path="/home/paelsam/Documents/DSII/class_smart/src/api/dashboard.api.js">
+      <file name="dashboard.api.js" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\api\dashboard.api.js">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -38,7 +38,7 @@
         <line num="30" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
       </file>
-      <file name="pedidos.api.js" path="/home/paelsam/Documents/DSII/class_smart/src/api/pedidos.api.js">
+      <file name="pedidos.api.js" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\api\pedidos.api.js">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -55,27 +55,36 @@
         <line num="56" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
       </file>
-      <file name="products.api.js" path="/home/paelsam/Documents/DSII/class_smart/src/api/products.api.js">
-        <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <file name="products.api.js" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\api\products.api.js">
+        <metrics statements="26" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
       </file>
-      <file name="users.api.js" path="/home/paelsam/Documents/DSII/class_smart/src/api/users.api.js">
+      <file name="users.api.js" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\api\users.api.js">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -93,13 +102,13 @@
     </package>
     <package name="src.components.categoria">
       <metrics statements="59" coveredstatements="28" conditionals="4" coveredconditionals="0" methods="25" coveredmethods="12"/>
-      <file name="CategoriaCard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/categoria/CategoriaCard.jsx">
+      <file name="CategoriaCard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\categoria\CategoriaCard.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="6" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
       </file>
-      <file name="CategoriasList.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/categoria/CategoriasList.jsx">
+      <file name="CategoriasList.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\categoria\CategoriasList.jsx">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="6" count="7" type="stmt"/>
         <line num="8" count="7" type="stmt"/>
@@ -112,7 +121,7 @@
         <line num="21" count="7" type="stmt"/>
         <line num="24" count="6" type="stmt"/>
       </file>
-      <file name="CategoriasListFilter.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/categoria/CategoriasListFilter.jsx">
+      <file name="CategoriasListFilter.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\categoria\CategoriasListFilter.jsx">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="7" count="7" type="stmt"/>
         <line num="8" count="7" type="stmt"/>
@@ -130,7 +139,7 @@
         <line num="30" count="6" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
       </file>
-      <file name="Navigation.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/categoria/Navigation.jsx">
+      <file name="Navigation.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\categoria\Navigation.jsx">
         <metrics statements="31" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="13" coveredmethods="0"/>
         <line num="12" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -167,7 +176,7 @@
     </package>
     <package name="src.components.cliente">
       <metrics statements="164" coveredstatements="0" conditionals="46" coveredconditionals="0" methods="46" coveredmethods="0"/>
-      <file name="CarritoCard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/CarritoCard.jsx">
+      <file name="CarritoCard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\CarritoCard.jsx">
         <metrics statements="29" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -199,7 +208,7 @@
         <line num="109" count="0" type="stmt"/>
         <line num="120" count="0" type="stmt"/>
       </file>
-      <file name="CarritoList.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/CarritoList.jsx">
+      <file name="CarritoList.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\CarritoList.jsx">
         <metrics statements="10" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -212,7 +221,7 @@
         <line num="39" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
       </file>
-      <file name="ClientCard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/ClientCard.jsx">
+      <file name="ClientCard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\ClientCard.jsx">
         <metrics statements="49" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -264,7 +273,7 @@
         <line num="119" count="0" type="stmt"/>
         <line num="124" count="0" type="stmt"/>
       </file>
-      <file name="ClientList.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/ClientList.jsx">
+      <file name="ClientList.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\ClientList.jsx">
         <metrics statements="13" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -280,7 +289,7 @@
         <line num="34" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
-      <file name="Navigation.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/Navigation.jsx">
+      <file name="Navigation.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\Navigation.jsx">
         <metrics statements="45" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="19" coveredmethods="0"/>
         <line num="14" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
@@ -328,7 +337,7 @@
         <line num="264" count="0" type="stmt"/>
         <line num="265" count="0" type="stmt"/>
       </file>
-      <file name="NavigationCar.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/NavigationCar.jsx">
+      <file name="NavigationCar.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\NavigationCar.jsx">
         <metrics statements="18" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -352,7 +361,7 @@
     </package>
     <package name="src.components.cliente.metodos_pago">
       <metrics statements="40" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="11" coveredmethods="0"/>
-      <file name="Bancos.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/metodos_pago/Bancos.jsx">
+      <file name="Bancos.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\metodos_pago\Bancos.jsx">
         <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
@@ -372,7 +381,7 @@
         <line num="36" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
       </file>
-      <file name="Targetas.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/cliente/metodos_pago/Targetas.jsx">
+      <file name="Targetas.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\cliente\metodos_pago\Targetas.jsx">
         <metrics statements="23" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
@@ -400,47 +409,47 @@
       </file>
     </package>
     <package name="src.components.login">
-      <metrics statements="30" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="EmailVerification.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/login/EmailVerification.jsx">
-        <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
+      <metrics statements="30" coveredstatements="30" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+      <file name="EmailVerification.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\login\EmailVerification.jsx">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
       </file>
-      <file name="Register.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/login/Register.jsx">
-        <metrics statements="19" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="51" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
-        <line num="99" count="0" type="stmt"/>
+      <file name="Register.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\login\Register.jsx">
+        <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="8" count="26" type="stmt"/>
+        <line num="10" count="26" type="stmt"/>
+        <line num="17" count="26" type="stmt"/>
+        <line num="19" count="26" type="stmt"/>
+        <line num="20" count="20" type="stmt"/>
+        <line num="26" count="26" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="29" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="79" count="26" type="stmt"/>
       </file>
     </package>
     <package name="src.components.pedidos">
       <metrics statements="78" coveredstatements="0" conditionals="18" coveredconditionals="0" methods="32" coveredmethods="0"/>
-      <file name="Navigation.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/pedidos/Navigation.jsx">
+      <file name="Navigation.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\pedidos\Navigation.jsx">
         <metrics statements="45" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="21" coveredmethods="0"/>
         <line num="12" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -488,7 +497,7 @@
         <line num="215" count="0" type="stmt"/>
         <line num="216" count="0" type="stmt"/>
       </file>
-      <file name="PedidoCard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/pedidos/PedidoCard.jsx">
+      <file name="PedidoCard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\pedidos\PedidoCard.jsx">
         <metrics statements="11" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -502,7 +511,7 @@
         <line num="24" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
       </file>
-      <file name="PedidoProductoCard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/pedidos/PedidoProductoCard.jsx">
+      <file name="PedidoProductoCard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\pedidos\PedidoProductoCard.jsx">
         <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -517,7 +526,7 @@
         <line num="24" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
       </file>
-      <file name="PedidosList.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/pedidos/PedidosList.jsx">
+      <file name="PedidosList.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\pedidos\PedidosList.jsx">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -533,7 +542,7 @@
     </package>
     <package name="src.components.products">
       <metrics statements="61" coveredstatements="16" conditionals="14" coveredconditionals="6" methods="29" coveredmethods="6"/>
-      <file name="Navigation.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/products/Navigation.jsx">
+      <file name="Navigation.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\products\Navigation.jsx">
         <metrics statements="45" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="23" coveredmethods="0"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -581,13 +590,13 @@
         <line num="230" count="0" type="stmt"/>
         <line num="231" count="0" type="stmt"/>
       </file>
-      <file name="ProductCard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/products/ProductCard.jsx">
+      <file name="ProductCard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\products\ProductCard.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="5" count="5" type="stmt"/>
         <line num="7" count="5" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
       </file>
-      <file name="ProductList.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/products/ProductList.jsx">
+      <file name="ProductList.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\products\ProductList.jsx">
         <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="7" count="14" type="stmt"/>
         <line num="9" count="14" type="stmt"/>
@@ -606,7 +615,7 @@
     </package>
     <package name="src.components.users">
       <metrics statements="62" coveredstatements="15" conditionals="12" coveredconditionals="4" methods="28" coveredmethods="6"/>
-      <file name="Navigation.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/users/Navigation.jsx">
+      <file name="Navigation.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\users\Navigation.jsx">
         <metrics statements="47" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="22" coveredmethods="0"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -656,13 +665,13 @@
         <line num="228" count="0" type="stmt"/>
         <line num="229" count="0" type="stmt"/>
       </file>
-      <file name="UserCard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/users/UserCard.jsx">
+      <file name="UserCard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\users\UserCard.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="6" count="5" type="stmt"/>
         <line num="8" count="5" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
       </file>
-      <file name="UserList.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/components/users/UserList.jsx">
+      <file name="UserList.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\components\users\UserList.jsx">
         <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="7" count="5" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
@@ -680,12 +689,12 @@
     </package>
     <package name="src.pages.categoria">
       <metrics statements="45" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="CategoriaBusqueda.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/categoria/CategoriaBusqueda.jsx">
+      <file name="CategoriaBusqueda.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\categoria\CategoriaBusqueda.jsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
-      <file name="CategoriaFormPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/categoria/CategoriaFormPage.jsx">
+      <file name="CategoriaFormPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\categoria\CategoriaFormPage.jsx">
         <metrics statements="42" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -730,14 +739,14 @@
         <line num="146" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="147" count="0" type="stmt"/>
       </file>
-      <file name="CategoriaPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/categoria/CategoriaPage.jsx">
+      <file name="CategoriaPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\categoria\CategoriaPage.jsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.cliente">
       <metrics statements="65" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="21" coveredmethods="0"/>
-      <file name="CarritoPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/cliente/CarritoPage.jsx">
+      <file name="CarritoPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\cliente\CarritoPage.jsx">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -752,7 +761,7 @@
         <line num="26" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
       </file>
-      <file name="ClientFavorites.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/cliente/ClientFavorites.jsx">
+      <file name="ClientFavorites.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\cliente\ClientFavorites.jsx">
         <metrics statements="20" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -775,20 +784,20 @@
         <line num="43" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
       </file>
-      <file name="ClientPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/cliente/ClientPage.jsx">
+      <file name="ClientPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\cliente\ClientPage.jsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="Nosotros.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/cliente/Nosotros.jsx">
+      <file name="Nosotros.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\cliente\Nosotros.jsx">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
       </file>
-      <file name="PedidosClientePage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/cliente/PedidosClientePage.jsx">
+      <file name="PedidosClientePage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\cliente\PedidosClientePage.jsx">
         <metrics statements="26" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="25" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
@@ -820,15 +829,15 @@
     </package>
     <package name="src.pages.dashboard">
       <metrics statements="104" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="51" coveredmethods="0"/>
-      <file name="BarrasIndicadoresUsuarios.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/BarrasIndicadoresUsuarios.jsx">
+      <file name="BarrasIndicadoresUsuarios.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\BarrasIndicadoresUsuarios.jsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
       </file>
-      <file name="BarrasProductosMasVendidos.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/BarrasProductosMasVendidos.jsx">
+      <file name="BarrasProductosMasVendidos.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\BarrasProductosMasVendidos.jsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
       </file>
-      <file name="Dashboard.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/Dashboard.jsx">
+      <file name="Dashboard.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\Dashboard.jsx">
         <metrics statements="16" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
@@ -847,7 +856,7 @@
         <line num="48" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
       </file>
-      <file name="LineasVentasDiarias.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/LineasVentasDiarias.jsx">
+      <file name="LineasVentasDiarias.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\LineasVentasDiarias.jsx">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -862,7 +871,7 @@
         <line num="45" count="0" type="stmt"/>
         <line num="66" count="0" type="stmt"/>
       </file>
-      <file name="PieEstadoPedido.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/PieEstadoPedido.jsx">
+      <file name="PieEstadoPedido.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\PieEstadoPedido.jsx">
         <metrics statements="7" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -872,7 +881,7 @@
         <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="30" count="0" type="stmt"/>
       </file>
-      <file name="PiePago.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/PiePago.jsx">
+      <file name="PiePago.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\PiePago.jsx">
         <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -882,7 +891,7 @@
         <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="26" count="0" type="stmt"/>
       </file>
-      <file name="TablaProductosMasVendidos.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/TablaProductosMasVendidos.jsx">
+      <file name="TablaProductosMasVendidos.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\TablaProductosMasVendidos.jsx">
         <metrics statements="23" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="13" coveredmethods="0"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -908,7 +917,7 @@
         <line num="102" count="0" type="stmt"/>
         <line num="104" count="0" type="stmt"/>
       </file>
-      <file name="TablaVentasDiarias.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/TablaVentasDiarias.jsx">
+      <file name="TablaVentasDiarias.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\TablaVentasDiarias.jsx">
         <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -927,7 +936,7 @@
         <line num="55" count="0" type="stmt"/>
         <line num="62" count="0" type="stmt"/>
       </file>
-      <file name="TableIndicadoresUsuario.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/dashboard/TableIndicadoresUsuario.jsx">
+      <file name="TableIndicadoresUsuario.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\dashboard\TableIndicadoresUsuario.jsx">
         <metrics statements="21" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -954,7 +963,7 @@
     </package>
     <package name="src.pages.login">
       <metrics statements="21" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="LoginFormPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/login/LoginFormPage.jsx">
+      <file name="LoginFormPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\login\LoginFormPage.jsx">
         <metrics statements="18" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
@@ -975,7 +984,7 @@
         <line num="95" count="0" type="stmt"/>
         <line num="103" count="0" type="stmt"/>
       </file>
-      <file name="ProtectedRoute.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/login/ProtectedRoute.jsx">
+      <file name="ProtectedRoute.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\login\ProtectedRoute.jsx">
         <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -984,7 +993,7 @@
     </package>
     <package name="src.pages.pedidos">
       <metrics statements="75" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="23" coveredmethods="0"/>
-      <file name="PedidosFilterPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/pedidos/PedidosFilterPage.jsx">
+      <file name="PedidosFilterPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\pedidos\PedidosFilterPage.jsx">
         <metrics statements="15" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -1002,11 +1011,11 @@
         <line num="32" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
-      <file name="PedidosPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/pedidos/PedidosPage.jsx">
+      <file name="PedidosPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\pedidos\PedidosPage.jsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
       </file>
-      <file name="PedidosProductosPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/pedidos/PedidosProductosPage.jsx">
+      <file name="PedidosProductosPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\pedidos\PedidosProductosPage.jsx">
         <metrics statements="59" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="16" coveredmethods="0"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
@@ -1071,7 +1080,7 @@
     </package>
     <package name="src.pages.products">
       <metrics statements="46" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="ProductFormPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/products/ProductFormPage.jsx">
+      <file name="ProductFormPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\products\ProductFormPage.jsx">
         <metrics statements="42" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -1116,7 +1125,7 @@
         <line num="186" count="0" type="stmt"/>
         <line num="188" count="0" type="stmt"/>
       </file>
-      <file name="ProductPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/products/ProductPage.jsx">
+      <file name="ProductPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\products\ProductPage.jsx">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1126,7 +1135,7 @@
     </package>
     <package name="src.pages.users">
       <metrics statements="45" coveredstatements="0" conditionals="30" coveredconditionals="0" methods="8" coveredmethods="0"/>
-      <file name="UserFormPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/users/UserFormPage.jsx">
+      <file name="UserFormPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\users\UserFormPage.jsx">
         <metrics statements="42" coveredstatements="0" conditionals="30" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="12" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -1171,7 +1180,7 @@
         <line num="190" count="0" type="stmt"/>
         <line num="191" count="0" type="stmt"/>
       </file>
-      <file name="UserPage.jsx" path="/home/paelsam/Documents/DSII/class_smart/src/pages/users/UserPage.jsx">
+      <file name="UserPage.jsx" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\pages\users\UserPage.jsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1180,7 +1189,7 @@
     </package>
     <package name="src.services">
       <metrics statements="27" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="authService.js" path="/home/paelsam/Documents/DSII/class_smart/src/services/authService.js">
+      <file name="authService.js" path="C:\Users\victo\OneDrive\Documentos\Univalle\Sexto semestre\DSII\class_smart\src\services\authService.js">
         <metrics statements="27" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
