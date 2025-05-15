@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>19/19</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -116,70 +116,70 @@
 <a name='L51'></a><a href='#L51'>51</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"> import axios from 'axios'
 &nbsp;
 &nbsp;
-const UserApi = <span class="cstat-no" title="statement not covered" >axios.create({</span>
+const UserApi = axios.create({
     baseURL: import.meta.env.VITE_API_URL
 });
 &nbsp;
 &nbsp;
-export const getAllUsers = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >UserApi.get("/api/usuarios/",{headers: {</span></span>
+export const getAllUsers = () =&gt; UserApi.get("/api/usuarios/",{headers: {
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
 &nbsp;
 &nbsp;
 &nbsp;
-export const registerUser=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(u</span>ser)=&gt;{</span>
-<span class="cstat-no" title="statement not covered" >    return UserApi.post("/api/usuarios/",user, {headers: {</span>
+export const registerUser=(user)=&gt;{
+    return UserApi.post("/api/usuarios/",user, {headers: {
         'Content-Type': 'application/json',
         'Authorization': `Token ${localStorage.getItem('authToken')}`
         
@@ -187,30 +187,30 @@ export const registerUser=<span class="cstat-no" title="statement not covered" >
       }})
 }
 &nbsp;
-export const getUser=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>d)=&gt;<span class="cstat-no" title="statement not covered" >UserApi.get('/api/usuarios/'+id+'/',{headers: {</span></span>
+export const getUser=(id)=&gt;UserApi.get('/api/usuarios/'+id+'/',{headers: {
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const updateUser=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(u</span>ser)=&gt;{</span>
-<span class="cstat-no" title="statement not covered" >    return UserApi.put("/api/usuarios/update_user/",user,{headers: {</span>
+export const updateUser=(user)=&gt;{
+    return UserApi.put("/api/usuarios/update_user/",user,{headers: {
         'Authorization': `Token ${localStorage.getItem('authToken')}`
       }})
 }
 &nbsp;
-export const deleteUser=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>d)=&gt; <span class="cstat-no" title="statement not covered" >UserApi.delete('/api/usuarios/'+id+'/',{headers: {</span></span>
+export const deleteUser=(id)=&gt; UserApi.delete('/api/usuarios/'+id+'/',{headers: {
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
 &nbsp;
-export const searchUsers=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(s</span>earchCriteria,searchValue)=&gt; <span class="cstat-no" title="statement not covered" >UserApi.get('/api/usuarios/search_users/?criteria='+searchCriteria+'&amp;'+'value='+searchValue,{headers: {</span></span>
+export const searchUsers=(searchCriteria,searchValue)=&gt; UserApi.get('/api/usuarios/search_users/?criteria='+searchCriteria+'&amp;'+'value='+searchValue,{headers: {
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const login=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(u</span>ser)=&gt;<span class="cstat-no" title="statement not covered" >UserApi.post('/login/',user)</span></span>
+export const login=(user)=&gt;UserApi.post('/login/',user)
 &nbsp;
-export const register_user=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(u</span>ser)=&gt;<span class="cstat-no" title="statement not covered" >UserApi.post('/register_user/',user)</span></span>
+export const register_user=(user)=&gt;UserApi.post('/register_user/',user)
 &nbsp;
-export const verfify_Email=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(t</span>oken)=&gt;<span class="cstat-no" title="statement not covered" >UserApi.get('/verify_email/',{headers: {</span></span>
+export const verfify_Email=(token)=&gt;UserApi.get('/verify_email/',{headers: {
   'Authorization': `Token ${token}`
 }})
 &nbsp;</pre></td></tr></table></pre>
@@ -220,7 +220,7 @@ export const verfify_Email=<span class="cstat-no" title="statement not covered" 
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-14T23:01:20.801Z
+                at 2025-05-15T05:09:08.925Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

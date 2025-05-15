@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -101,77 +101,77 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import axios from 'axios'
-const dashboardApi = <span class="cstat-no" title="statement not covered" >axios.create({</span>
+const dashboardApi = axios.create({
     baseURL: import.meta.env.VITE_API_URL
 });
-export const productosMasVendidos=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >dashboardApi.get('api/productos_mas_vendidos',{headers: {</span></span>
+export const productosMasVendidos=()=&gt;dashboardApi.get('api/productos_mas_vendidos',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const indicadoresUsuario=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >dashboardApi.get('api/indicadores_por_usuario',{headers: {</span></span>
+export const indicadoresUsuario=()=&gt;dashboardApi.get('api/indicadores_por_usuario',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const ventasDiarias=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >dashboardApi.get('api/ventas_diarias',{headers: {</span></span>
+export const ventasDiarias=()=&gt;dashboardApi.get('api/ventas_diarias',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const metodosPMasUtilizados=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >dashboardApi.get('api/metodos_pago_mas_utilizados',{headers: {</span></span>
+export const metodosPMasUtilizados=()=&gt;dashboardApi.get('api/metodos_pago_mas_utilizados',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const tablaProductosMasVendidos=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >dashboardApi.get('api/productosMasVendidos',{headers: {</span></span>
+export const tablaProductosMasVendidos=()=&gt;dashboardApi.get('api/productosMasVendidos',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const  valorTotalVentas=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >dashboardApi.get('api/valor_total_ventas',{headers: {</span></span>
+export const  valorTotalVentas=()=&gt;dashboardApi.get('api/valor_total_ventas',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})
 &nbsp;
-export const  estadosPedidos=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >dashboardApi.get('api/pedidos_por_estado',{headers: {</span></span>
+export const  estadosPedidos=()=&gt;dashboardApi.get('api/pedidos_por_estado',{headers: {
     'Content-Type': 'application/json', 
     'Authorization': `Token ${localStorage.getItem('authToken')}`
   }})</pre></td></tr></table></pre>
@@ -181,7 +181,7 @@ export const  estadosPedidos=<span class="cstat-no" title="statement not covered
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-14T23:01:20.801Z
+                at 2025-05-15T05:09:08.925Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
