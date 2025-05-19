@@ -198,14 +198,7 @@
 <a name='L133'></a><a href='#L133'>133</a>
 <a name='L134'></a><a href='#L134'>134</a>
 <a name='L135'></a><a href='#L135'>135</a>
-<a name='L136'></a><a href='#L136'>136</a>
-<a name='L137'></a><a href='#L137'>137</a>
-<a name='L138'></a><a href='#L138'>138</a>
-<a name='L139'></a><a href='#L139'>139</a>
-<a name='L140'></a><a href='#L140'>140</a>
-<a name='L141'></a><a href='#L141'>141</a>
-<a name='L142'></a><a href='#L142'>142</a>
-<a name='L143'></a><a href='#L143'>143</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L136'></a><a href='#L136'>136</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,7 +222,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -241,23 +233,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -349,66 +335,56 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useEffect } from "react";
 &nbsp;
-import { indicadoresUsuario, productosMasVendidos, valorTotalVentas } from "../../api/dashboard.api";
+import {
+  indicadoresUsuario,
+  productosMasVendidos,
+  valorTotalVentas,
+} from "../../api/dashboard.api";
 import { useState } from "react";
 import { TableIndicadoresUsuario } from "./TableIndicadoresUsuario";
-import { TableVentasDiarias } from "./TablaVentasDiarias";
+import { TableVentasDiarias } from "./TableVentasDiarias";
 import PiePago from "./PiePago";
 import { BarrasProductosMasVendidos } from "./BarrasProductosMasVendidos";
-import { BarrasIndicadoresUsuarios } from "./BarrasIndicadoresUsuarios"
+import { BarrasIndicadoresUsuarios } from "./BarrasIndicadoresUsuarios";
 &nbsp;
 import { TablaProductosMasVendidos } from "./TablaProductosMasVendidos";
 import LineasVentasDiarias from "./LineasVentasDiarias";
 import PieEstadoPedido from "./PieEstadoPedido";
 &nbsp;
-&nbsp;
-&nbsp;
 export default function <span class="fstat-no" title="function not covered" >Dashboard(</span>) {
-&nbsp;
-&nbsp;
-  const [selectedRows, setSelectedRows] = <span class="cstat-no" title="statement not covered" >useState([])</span>
-  const [selectedRowsIndicadores, setSelectedRowsIndicadores] = <span class="cstat-no" title="statement not covered" >useState([])</span>
-  const [data, setData] = <span class="cstat-no" title="statement not covered" >useState([])</span>
-  const [total_ventas, setTotalVentas] = <span class="cstat-no" title="statement not covered" >useState(0)</span>
-&nbsp;
+  const [selectedRows, setSelectedRows] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
+  const [selectedRowsIndicadores, setSelectedRowsIndicadores] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
+  const [data, setData] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
+  const [total_ventas, setTotalVentas] = <span class="cstat-no" title="statement not covered" >useState(0);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     async function <span class="fstat-no" title="function not covered" >loadProductosMasVendidos(</span>) {
       const res = <span class="cstat-no" title="statement not covered" >await productosMasVendidos();</span>
       const res2 = <span class="cstat-no" title="statement not covered" >await valorTotalVentas();</span>
       const res3 = <span class="cstat-no" title="statement not covered" >await indicadoresUsuario();</span>
-<span class="cstat-no" title="statement not covered" >      setData(res.data)</span>
-<span class="cstat-no" title="statement not covered" >      setSelectedRows(res.data)</span>
-<span class="cstat-no" title="statement not covered" >      setTotalVentas(res2.data.total_ventas)</span>
+<span class="cstat-no" title="statement not covered" >      setData(res.data);</span>
+<span class="cstat-no" title="statement not covered" >      setSelectedRows(res.data);</span>
+<span class="cstat-no" title="statement not covered" >      setTotalVentas(res2.data.total_ventas);</span>
 &nbsp;
       //procesar datos indicadores
 &nbsp;
-      const newIndicadores = <span class="cstat-no" title="statement not covered" >res3.data.length != 0 ? res3.data.map(<span class="fstat-no" title="function not covered" >js</span>on =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >        {</span>
-          'nombre': json.usuarios__username,
-          'total_pedidos': json.total_pedidos
+      const newIndicadores =
+<span class="cstat-no" title="statement not covered" >        res3.data.length != 0</span>
+          ? res3.data.map(<span class="fstat-no" title="function not covered" >(j</span>son) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+              nombre: json.usuarios__username,
+              total_pedidos: json.total_pedidos,
+            }))
+          : [];
 &nbsp;
-        })) : []
-&nbsp;
-<span class="cstat-no" title="statement not covered" >      setSelectedRowsIndicadores(newIndicadores)</span>
-&nbsp;
-&nbsp;
+<span class="cstat-no" title="statement not covered" >      setSelectedRowsIndicadores(newIndicadores);</span>
     }
 <span class="cstat-no" title="statement not covered" >    loadProductosMasVendidos();</span>
-&nbsp;
-  }, [])
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+  }, []);
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;div className="container mx-auto px-4"&gt;
-&nbsp;
-      &lt;div className="container mx-auto px-4 py-5" &gt;
-&nbsp;
-&nbsp;
-        &lt;h2 className="text-5xl font-bold mb-8 text-customBlue" &gt;Dash Board&lt;/h2&gt;
+      &lt;div className="container mx-auto px-4 py-5"&gt;
+        &lt;h2 className="text-5xl font-bold mb-8 text-customBlue"&gt;Dash Board&lt;/h2&gt;
 &nbsp;
         &lt;div className="grid grid-cosl-1 sm:grid-cols-2 md:grid-cols-3 gap-4"&gt;
           {/* PRODUCTOS MAS VENDIDOS */}
@@ -418,10 +394,9 @@ export default function <span class="fstat-no" title="function not covered" >Das
           &lt;/div&gt;
           {/* INDICADORES USUARIO */}
           &lt;div className="bg-gray-200  shadow-md rounded px-4 py-6"&gt;
-&nbsp;
-            &lt;TableIndicadoresUsuario setSelectedRowsIndicadores={setSelectedRowsIndicadores} /&gt;
-&nbsp;
-&nbsp;
+            &lt;TableIndicadoresUsuario
+              setSelectedRowsIndicadores={setSelectedRowsIndicadores}
+            /&gt;
           &lt;/div&gt;
           {/* VENTAS DIARIAS */}
 &nbsp;
@@ -429,66 +404,70 @@ export default function <span class="fstat-no" title="function not covered" >Das
             &lt;TableVentasDiarias /&gt;
           &lt;/div&gt;
 &nbsp;
-&nbsp;
-&nbsp;
           &lt;div className="shadow-md bg-gray-200   rounded px-4 py-6"&gt;
-            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;Productos Mas Vendidos&lt;/h2&gt;
+            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;
+              Productos Mas Vendidos
+            &lt;/h2&gt;
 &nbsp;
             &lt;BarrasProductosMasVendidos selectedRows={selectedRows} /&gt;
-&nbsp;
           &lt;/div&gt;
 &nbsp;
           &lt;div className="shadow-md rounded px-4 bg-gray-200  py-6"&gt;
-            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;Cantidad Ventas por Usuario&lt;/h2&gt;
+            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;
+              Cantidad Ventas por Usuario
+            &lt;/h2&gt;
 &nbsp;
-            &lt;BarrasIndicadoresUsuarios selectedRowsIndicadores={selectedRowsIndicadores} /&gt;
-&nbsp;
+            &lt;BarrasIndicadoresUsuarios
+              selectedRowsIndicadores={selectedRowsIndicadores}
+            /&gt;
           &lt;/div&gt;
 &nbsp;
           {/* GRAFICA DE LINEAS DE VENTAS DIARIAS */}
 &nbsp;
           &lt;div className="bg-gray-200  shadow-md rounded px-4 py-6"&gt;
-            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;Ventas Diarias en Pesos&lt;/h2&gt;
+            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;
+              Ventas Diarias en Pesos
+            &lt;/h2&gt;
 &nbsp;
             &lt;LineasVentasDiarias /&gt;
-&nbsp;
           &lt;/div&gt;
 &nbsp;
           {/* PIE METODOS PAGO MAS UTILIZADOS */}
 &nbsp;
           &lt;div className="bg-gray-200  shadow-md rounded px-4 py-6"&gt;
-            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;Metodos de Pago Mas Usados&lt;/h2&gt;
+            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;
+              Metodos de Pago Mas Usados
+            &lt;/h2&gt;
 &nbsp;
             &lt;PiePago /&gt;
-&nbsp;
           &lt;/div&gt;
 &nbsp;
           {/* PIE METODOS PAGO MAS UTILIZADOS */}
 &nbsp;
           &lt;div className="bg-gray-200  shadow-md rounded px-4 py-6"&gt;
-            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;Estado Pedidos&lt;/h2&gt;
+            &lt;h2 className="text-xl font-bold mb-2 text-gray-500"&gt;
+              Estado Pedidos
+            &lt;/h2&gt;
 &nbsp;
             &lt;PieEstadoPedido /&gt;
-&nbsp;
           &lt;/div&gt;
 &nbsp;
           &lt;div className="text-center text-2xl text-gray-500 font-bold bg-gray-200 shadow-md rounded px-4 py-6"&gt;
             &lt;span&gt;Total Ingresos:&lt;/span&gt;
             &lt;div className="flex justify-center items-center mt-4"&gt;
-              &lt;div className="text-white rounded-full w-32 h-32 flex justify-center items-center text-xl" style={{ backgroundColor: "#0FA0CC" }}&gt;
+              &lt;div
+                className="text-white rounded-full w-32 h-32 flex justify-center items-center text-xl"
+                style={{ backgroundColor: "#0FA0CC" }}
+              &gt;
                 {total_ventas}$
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-&nbsp;
-&nbsp;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   );
-};
-&nbsp;
-&nbsp;
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -496,7 +475,7 @@ export default function <span class="fstat-no" title="function not covered" >Das
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-15T15:29:55.942Z
+                at 2025-05-19T15:12:25.571Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
