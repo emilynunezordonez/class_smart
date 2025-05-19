@@ -24,12 +24,9 @@ dist-ssr
 *.sw?
 .vercel
 
-# jest
-# coverage/*
-# coverage
-
 # ignore coverage except Icov.info
 coverage/icov-report/*
+coverage/lcov-report/*
 coverage/clover.xml
 coverage/coverage-final.json
 
