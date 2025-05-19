@@ -109,6 +109,7 @@ export function Navigation() {
         <div className="relative flex items-center space-x-4">
           {/* Ícono de Búsqueda */}
           <div
+            aria-label="abrir-busqueda"
             className="cursor-pointer"
             onClick={() => setIsSearchOpen(!isSearchOpen)}
           >
@@ -130,6 +131,7 @@ export function Navigation() {
                   className="w-full px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-black"
                 />
                 <button
+                  aria-label="buscar-producto"
                   type="submit"
                   className="bg-[#0FA0CC] text-white px-4 py-2 rounded-r-lg hover:bg-[#0c88ad]"
                 >
@@ -145,6 +147,7 @@ export function Navigation() {
                 {/* <option value="categoria">Categoria</option> */}
               </select>
               <button
+                aria-label="cancelar-busqueda"
                 onClick={() => setIsSearchOpen(false)}
                 className="mt-4 w-full bg-[#0FA0CC] py-2 rounded-lg hover:bg-red-600"
               >
@@ -156,6 +159,7 @@ export function Navigation() {
         {/* Botón de Salir */}
       <div className="fixed bottom-4 left-4">
         <button
+          aria-label="cerrar-sesion"
           className="text-white p-2 rounded-full shadow-lg transition duration-300 transform hover:scale-110"
           style={{ backgroundColor: "#0FA0CC" }}
           onClick={() => {
@@ -171,6 +175,7 @@ export function Navigation() {
       <div className="fixed bottom-4 right-4">
         <div className="relative">
           <button
+            aria-label="agregar-categoria"
             className="text-white p-4 rounded-full shadow-lg transition duration-300 transform hover:scale-110"
             style={{ backgroundColor: "#0FA0CC" }}
             onClick={() => {
