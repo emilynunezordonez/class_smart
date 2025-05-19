@@ -25,7 +25,7 @@ describe("TableIndicadoresUsuario", () => {
   test("renderiza y muestra datos", async () => {
     api.indicadoresUsuario.mockResolvedValueOnce({ data: mockData });
 
-    render(<TableIndicadoresUsuario setSelectedRowsIndicadores={() => {}} />);
+    render(<TableIndicadoresUsuario setSelectedRowsIndicadores={() => { }} />);
 
     // Esperar que los datos se carguen y aparezcan en la tabla
     await waitFor(() => {
@@ -58,5 +58,25 @@ describe("TableIndicadoresUsuario", () => {
         total_pedidos: 5,
       },
     ]);
+  });
+
+  test("filtra los registros al escribir en el input de búsqueda", async () => {
+    api.indicadoresUsuario.mockResolvedValueOnce({ data: mockData });
+
+    render(<TableIndicadoresUsuario setSelectedRowsIndicadores={() => { }} />);
+
+    await waitFor(() => {
+      expect(screen.getByText("juan")).toBeInTheDocument();
+      expect(screen.getByText("ana")).toBeInTheDocument();
+    });
+
+    const input = screen.getByRole("textbox");
+    fireEvent.change(input, { target: { value: "ana" } });
+
+    // Solo debe aparecer "ana" después del filtrado
+    await waitFor(() => {
+      expect(screen.getByText("ana")).toBeInTheDocument();
+      expect(screen.queryByText("juan")).not.toBeInTheDocument();
+    });
   });
 });
