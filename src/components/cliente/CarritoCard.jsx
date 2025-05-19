@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { updateCantidadProductoCarrito } from "../../api/products.api";
