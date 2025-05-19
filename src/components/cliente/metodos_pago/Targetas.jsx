@@ -1,3 +1,4 @@
+import React from 'react'
 import visa from "../../../images/visa.jpg"
 import mastercard from "../../../images/mastercard.jpg"
 import dinersclub from "../../../images/dinersclub.png"
@@ -7,7 +8,7 @@ import toast from 'react-hot-toast'
 
 
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { authService } from '../../../services/authService'
 
 export default function Targetas({ userP, formD }) {

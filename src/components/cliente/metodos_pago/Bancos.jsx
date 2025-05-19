@@ -1,9 +1,10 @@
+import React from 'react'
 import bancolombia from "../../../images/bancolombia.png"
 import nequi from "../../../images/nequi.png"
 import bancoBogota from "../../../images/bancoBogota.png"
 import davivienda from "../../../images/davivienda.jpg"
 import { useNavigate } from 'react-router-dom'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { authService } from '../../../services/authService'
 
 

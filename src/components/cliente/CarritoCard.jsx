@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 import { updateCantidadProductoCarrito } from "../../api/products.api";
 
 
