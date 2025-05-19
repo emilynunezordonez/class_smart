@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from "react"
 import { searchUserProducts } from '../../api/products.api'
 import { CarritoCard } from "./CarritoCard"
