@@ -179,7 +179,7 @@ export default function PedidosClientePage() {
         />
         <img
           src={efecti}
-          alt="americanexpress"
+          alt="efecty"
           className="w-40 h-30 object-contain p-1"
         />
 
