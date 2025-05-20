@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -217,36 +217,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -333,14 +333,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useEffect } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useEffect, useState } from "react";
 &nbsp;
 import {
   indicadoresUsuario,
   productosMasVendidos,
   valorTotalVentas,
 } from "../../api/dashboard.api";
-import { useState } from "react";
+&nbsp;
 import { TableIndicadoresUsuario } from "./TableIndicadoresUsuario";
 import { TableVentasDiarias } from "./TableVentasDiarias";
 import PiePago from "./PiePago";
@@ -351,37 +351,37 @@ import { TablaProductosMasVendidos } from "./TablaProductosMasVendidos";
 import LineasVentasDiarias from "./LineasVentasDiarias";
 import PieEstadoPedido from "./PieEstadoPedido";
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >Dashboard(</span>) {
-  const [selectedRows, setSelectedRows] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
-  const [selectedRowsIndicadores, setSelectedRowsIndicadores] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
-  const [data, setData] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
-  const [total_ventas, setTotalVentas] = <span class="cstat-no" title="statement not covered" >useState(0);</span>
+export default function Dashboard() {
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [selectedRowsIndicadores, setSelectedRowsIndicadores] = useState([]);
+  const [data, setData] = useState([]);
+  const [total_ventas, setTotalVentas] = useState(0);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-    async function <span class="fstat-no" title="function not covered" >loadProductosMasVendidos(</span>) {
-      const res = <span class="cstat-no" title="statement not covered" >await productosMasVendidos();</span>
-      const res2 = <span class="cstat-no" title="statement not covered" >await valorTotalVentas();</span>
-      const res3 = <span class="cstat-no" title="statement not covered" >await indicadoresUsuario();</span>
-<span class="cstat-no" title="statement not covered" >      setData(res.data);</span>
-<span class="cstat-no" title="statement not covered" >      setSelectedRows(res.data);</span>
-<span class="cstat-no" title="statement not covered" >      setTotalVentas(res2.data.total_ventas);</span>
+  useEffect(() =&gt; {
+    async function loadProductosMasVendidos() {
+      const res = await productosMasVendidos();
+      const res2 = await valorTotalVentas();
+      const res3 = await indicadoresUsuario();
+      setData(res.data);
+      setSelectedRows(res.data);
+      setTotalVentas(res2.data.total_ventas);
 &nbsp;
       //procesar datos indicadores
 &nbsp;
       const newIndicadores =
-<span class="cstat-no" title="statement not covered" >        res3.data.length != 0</span>
-          ? res3.data.map(<span class="fstat-no" title="function not covered" >(j</span>son) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+        res3.data.length != 0
+          ? res3.data.map((json) =&gt; ({
               nombre: json.usuarios__username,
               total_pedidos: json.total_pedidos,
             }))
           : [];
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      setSelectedRowsIndicadores(newIndicadores);</span>
+      setSelectedRowsIndicadores(newIndicadores);
     }
-<span class="cstat-no" title="statement not covered" >    loadProductosMasVendidos();</span>
+    loadProductosMasVendidos();
   }, []);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="container mx-auto px-4"&gt;
       &lt;div className="container mx-auto px-4 py-5"&gt;
         &lt;h2 className="text-5xl font-bold mb-8 text-customBlue"&gt;Dash Board&lt;/h2&gt;
@@ -475,7 +475,7 @@ export default function <span class="fstat-no" title="function not covered" >Das
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-19T15:52:03.285Z
+                at 2025-05-20T03:16:16.275Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

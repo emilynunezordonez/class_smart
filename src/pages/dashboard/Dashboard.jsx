@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   indicadoresUsuario,
   productosMasVendidos,
   valorTotalVentas,
 } from "../../api/dashboard.api";
-import { useState } from "react";
+
 import { TableIndicadoresUsuario } from "./TableIndicadoresUsuario";
 import { TableVentasDiarias } from "./TableVentasDiarias";
 import PiePago from "./PiePago";

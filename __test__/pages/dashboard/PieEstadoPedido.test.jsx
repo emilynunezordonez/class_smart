@@ -20,29 +20,70 @@ jest.mock("victory", () => {
   };
 });
 
-// Mock de la API
+// Mock base de la API
 jest.mock("../../../src/api/dashboard.api", () => ({
-  estadosPedidos: jest.fn(() =>
-    Promise.resolve({
+  estadosPedidos: jest.fn(),
+}));
+
+describe("PieEstadoPedido", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  test("renderiza correctamente los datos cuando hay dos estados", async () => {
+    const { estadosPedidos } = require("../../../src/api/dashboard.api");
+    estadosPedidos.mockResolvedValueOnce({
       data: [
         { estado: "en proceso", total_pedidos: 5 },
         { estado: "entregado", total_pedidos: 10 },
       ],
-    })
-  ),
-}));
+    });
 
-describe("PieEstadoPedido", () => {
-  test("renderiza correctamente los datos en el gráfico", async () => {
     render(<PieEstadoPedido />);
 
-    // Espera a que los datos se procesen y se rendericen
     await waitFor(() => {
-      expect(screen.getByTestId("victory-pie")).toBeInTheDocument();
       const slices = screen.getAllByTestId("slice");
       expect(slices).toHaveLength(2);
       expect(slices[0]).toHaveTextContent("Entregado: 10");
       expect(slices[1]).toHaveTextContent("En proceso: 5");
+    });
+  });
+
+  test("renderiza correctamente cuando hay un solo estado con usuarios__username", async () => {
+    const { estadosPedidos } = require("../../../src/api/dashboard.api");
+    estadosPedidos.mockResolvedValueOnce({
+      data: [{ total_pedidos: 3, usuarios__username: true }],
+    });
+
+    render(<PieEstadoPedido />);
+    await waitFor(() => {
+      const slices = screen.getAllByTestId("slice");
+      expect(slices).toHaveLength(1);
+      expect(slices[0]).toHaveTextContent("Entregado: 3");
+    });
+  });
+
+  test("renderiza correctamente cuando hay un solo estado sin usuarios__username", async () => {
+    const { estadosPedidos } = require("../../../src/api/dashboard.api");
+    estadosPedidos.mockResolvedValueOnce({
+      data: [{ total_pedidos: 4, usuarios__username: null }],
+    });
+
+    render(<PieEstadoPedido />);
+    await waitFor(() => {
+      const slices = screen.getAllByTestId("slice");
+      expect(slices).toHaveLength(1);
+      expect(slices[0]).toHaveTextContent("En Proceso: 4");
+    });
+  });
+
+  test("no renderiza ningún dato cuando data está vacía", async () => {
+    const { estadosPedidos } = require("../../../src/api/dashboard.api");
+    estadosPedidos.mockResolvedValueOnce({ data: [] });
+
+    render(<PieEstadoPedido />);
+    await waitFor(() => {
+      expect(screen.queryByTestId("slice")).not.toBeInTheDocument();
     });
   });
 });
