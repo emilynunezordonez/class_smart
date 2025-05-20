@@ -1,108 +1,125 @@
-import React from "react";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import { MemoryRouter, useNavigate } from "react-router-dom";
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { Navigation } from "../../../src/components/categoria/Navigation";
-import { getAllCategories } from "../../../src/api/categories.api";
+import { BrowserRouter } from 'react-router-dom';
+import * as categoriesApi from "../../../src/api/categories.api";
 import '@testing-library/jest-dom';
 
-// Mocks
-jest.mock("../../../src/api/categories.api", () => ({
-  getAllCategories: jest.fn(() => Promise.resolve({ data: [] })),
-}));
+// Mock de useNavigate de react-router-dom
+const mockedNavigate = jest.fn();
 
-jest.mock("react-router-dom", () => {
-  const actual = jest.requireActual("react-router-dom");
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
-    useNavigate: jest.fn(),
-    NavLink: ({ children, to }) => <a href={to}>{children}</a>,
-    Link: ({ to, children }) => <a href={to}>{children}</a>,
+    useNavigate: () => mockedNavigate,
   };
 });
 
-jest.mock('lucide-react', () => ({
-  Search: () => <div data-testid="search-icon">SearchIcon</div>,
-  Plus: () => <div data-testid="plus-icon">PlusIcon</div>,
-  LogOut: () => <div data-testid="logout-icon">LogOutIcon</div>,
+// Mock de la API de categorías
+jest.mock('../../../src/api/categories.api', () => ({
+  getAllCategories: jest.fn().mockResolvedValue({ data: ['Categoria1', 'Categoria2'] })
 }));
 
-describe("Navigation Component", () => {
-  const mockNavigate = jest.fn();
-
+describe('Navigation', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
-    useNavigate.mockReturnValue(mockNavigate);
-    localStorage.clear();
+    mockedNavigate.mockClear();
+    render(
+      <BrowserRouter>
+        <Navigation />
+      </BrowserRouter>
+    );
   });
 
-  test("debe navegar a /categoriasBusqueda/test al buscar", async () => {
-    render(
-      <MemoryRouter>
-        <Navigation />
-      </MemoryRouter>
-    );
+  test('llama a getAllCategories al montar', () => {
+    expect(categoriesApi.getAllCategories).toHaveBeenCalledTimes(1);
+  });
 
-    // Abrir modal
-    const searchIcon = screen.getByTestId("search-icon");
-    fireEvent.click(searchIcon);
+  test('renderiza enlaces de navegación principales', () => {
+    expect(screen.getByText('Productos')).toBeInTheDocument();
+    expect(screen.getByText('Usuarios')).toBeInTheDocument();
+    expect(screen.getByText('Categorias')).toBeInTheDocument();
+    expect(screen.getByText('Pedidos')).toBeInTheDocument();
+    expect(screen.getByText('Dashboard')).toBeInTheDocument();
+  });
 
-    // Escribir búsqueda
-    const input = await screen.findByPlaceholderText(/Buscar producto por/);
-    fireEvent.change(input, { target: { value: "test" } });
+  test('abre la barra de búsqueda al hacer clic en el botón de búsqueda', async () => {
+    const searchBtn = screen.getByLabelText('abrir-busqueda');
+    fireEvent.click(searchBtn);
 
-    // Enviar formulario
-    const submitButton = screen.getByRole("button", { name: /SearchIcon/i });
-    fireEvent.click(submitButton);
+    const input = await screen.findByPlaceholderText(/Buscar producto por/i);
+    expect(input).toBeInTheDocument();
+  });
+
+  test('realiza navegación al hacer submit en búsqueda', async () => {
+    // Abrir búsqueda
+    const searchBtn = screen.getByLabelText('abrir-busqueda');
+    fireEvent.click(searchBtn);
+
+    // Esperar input
+    const input = await screen.findByPlaceholderText(/Buscar producto por/i);
+    const form = input.closest('form');
+
+    fireEvent.change(input, { target: { value: 'telefono' } });
+    fireEvent.submit(form);
 
     await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith("/categoriasBusqueda/test");
+      expect(mockedNavigate).toHaveBeenCalledWith('/categoriasBusqueda/telefono');
     });
   });
 
-  test("debe cerrar el modal al hacer clic en cancelar", async () => {
-    render(
-      <MemoryRouter>
-        <Navigation />
-      </MemoryRouter>
-    );
+  test('cierra sesión y navega al login al hacer clic en el botón de salir', () => {
+    const logoutBtn = screen.getByLabelText('cerrar-sesion');
+    fireEvent.click(logoutBtn);
+    expect(mockedNavigate).toHaveBeenCalledWith('/login');
+  });
 
-    // Abrir modal
-    const searchIcon = screen.getByTestId("search-icon");
-    fireEvent.click(searchIcon);
+  test('navega al formulario de categoría al hacer clic en el botón de agregar', () => {
+    const addBtn = screen.getByLabelText('agregar-categoria');
+    fireEvent.click(addBtn);
+    expect(mockedNavigate).toHaveBeenCalledWith('/categoriasForm');
+  });
 
-    // Cerrar modal
-    const cancelButton = screen.getByText("Cancelar");
-    fireEvent.click(cancelButton);
+  //Nuevos
+  test('permite cambiar el criterio de búsqueda', async () => {
+    fireEvent.click(screen.getByLabelText('abrir-busqueda'));
+    const select = await screen.findByRole('combobox');
+    fireEvent.change(select, { target: { value: 'nombre' } });
+
+    const input = await screen.findByPlaceholderText(/Buscar producto por nombre/i);
+    expect(input).toBeInTheDocument();
+  });
+
+  test('cierra la barra de búsqueda al hacer clic en Cancelar', async () => {
+    fireEvent.click(screen.getByLabelText('abrir-busqueda'));
+
+    const cancelBtn = await screen.findByRole('button', { name: /cancelar/i });
+    fireEvent.click(cancelBtn);
 
     await waitFor(() => {
-      expect(screen.queryByPlaceholderText(/Buscar producto por/)).not.toBeInTheDocument();
+        expect(screen.queryByPlaceholderText(/Buscar producto por/i)).not.toBeInTheDocument();
     });
   });
 
-  test("debe navegar a /categoriasForm al hacer clic en +", () => {
-    render(
-      <MemoryRouter>
-        <Navigation />
-      </MemoryRouter>
-    );
+  test('cierra sesión y redirige al login', () => {
+    localStorage.setItem('authToken', 'mockToken');
 
-    const plusIcon = screen.getByTestId("plus-icon");
-    fireEvent.click(plusIcon.closest("button"));
+    const logoutBtn = screen.getByLabelText('cerrar-sesion');
 
-    expect(mockNavigate).toHaveBeenCalledWith("/categoriasForm");
+    fireEvent.click(logoutBtn);
+
+    expect(localStorage.getItem('authToken')).toBeNull();
+    expect(mockedNavigate).toHaveBeenCalledWith('/login');
   });
 
-  test("debe eliminar authToken y navegar a /login al hacer logout", () => {
-    render(
-      <MemoryRouter>
-        <Navigation />
-      </MemoryRouter>
-    );
+  test('redirige al formulario de categorías al hacer clic en el botón flotante', () => {
+    const addBtn = screen.getByLabelText('agregar-categoria');
 
-    const logoutIcon = screen.getByTestId("logout-icon");
-    fireEvent.click(logoutIcon.closest("button"));
+    fireEvent.click(addBtn);
 
-    expect(localStorage.getItem("authToken")).toBeNull();
-    expect(mockNavigate).toHaveBeenCalledWith("/login");
+    expect(mockedNavigate).toHaveBeenCalledWith('/categoriasForm');
   });
+
+
+
 });
