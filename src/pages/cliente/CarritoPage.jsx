@@ -3,7 +3,7 @@ import { CarritoList } from "../../components/cliente/CarritoList"
 import { useParams } from "react-router-dom"
 import { Navigation } from '../../components/cliente/Navigation'
 import { NavigationCar } from "../../components/cliente/NavigationCar";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { searchUserProducts } from "../../api/products.api";
 export function CarritoPage() {
   const params = useParams(); // Obtén todos los parámetros como un objeto

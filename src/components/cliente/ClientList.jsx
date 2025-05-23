@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { searchProducts } from "../../api/products.api"
 import { ClientCard } from "./ClientCard"
 export function ClientList({ searchCriteria, searchValue }) {
