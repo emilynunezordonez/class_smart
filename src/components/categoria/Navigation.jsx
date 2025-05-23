@@ -33,6 +33,7 @@ export function Navigation() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
+  /*
   const toggleProductDropdown = () => {
     setIsProductDropdownOpen(!isProductDropdownOpen);
     setIsCategoryDropdownOpen(false);
@@ -42,6 +43,7 @@ export function Navigation() {
     e.stopPropagation();
     setIsCategoryDropdownOpen(!isCategoryDropdownOpen);
   };
+  */
 
   const handleSearch = (e) => {
     e.preventDefault();
