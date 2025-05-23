@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { insertarCarrito, searchUserProducts,createFavorito,deleteFavorito,getAllFavoritos } from "../../api/products.api";
 import toast from "react-hot-toast";
-import { useEffect, useState } from "react";
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { ShoppingCart, Plus, Star} from 'lucide-react';
 import { authService } from '../../services/authService';
 

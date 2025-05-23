@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { searchUserProducts } from '../../api/products.api'
 import { CarritoCard } from "./CarritoCard"
 import carrito from '../../images/carrito.png'

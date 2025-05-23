@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -96,25 +96,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,26 +123,26 @@
 import { getAllPedidos } from '../../api/pedidos.api';
 import { PedidoCard } from './PedidoCard';
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >PedidosList(</span>) {
-    const [pedidos, setPedidos] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
+export function PedidosList() {
+    const [pedidos, setPedidos] = useState([]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-        const fetchPedidos = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            try {</span>
-                const response = <span class="cstat-no" title="statement not covered" >await getAllPedidos();</span>
-<span class="cstat-no" title="statement not covered" >                setPedidos(response.data);</span>
+    useEffect(() =&gt; {
+        const fetchPedidos = async () =&gt; {
+            try {
+                const response = await getAllPedidos();
+                setPedidos(response.data);
             } catch (error) {
-<span class="cstat-no" title="statement not covered" >                console.error('Error fetching pedidos:', error);</span>
+                console.error('Error fetching pedidos:', error);
             }
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        fetchPedidos();</span>
+        fetchPedidos();
     }, []);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
         &lt;div className="grid grid-cols-1 gap-3"&gt;
-      {pedidos.map(<span class="fstat-no" title="function not covered" >pe</span>dido =&gt; (
-<span class="cstat-no" title="statement not covered" >        &lt;PedidoCard key={pedido.id} pedido={pedido} /&gt;</span>
+      {pedidos.map(pedido =&gt; (
+        &lt;PedidoCard key={pedido.id} pedido={pedido} /&gt;
       ))}
 &nbsp;
     &lt;/div&gt;
@@ -154,7 +154,7 @@ export function <span class="fstat-no" title="function not covered" >PedidosList
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-20T03:16:16.275Z
+                at 2025-05-23T01:41:06.006Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

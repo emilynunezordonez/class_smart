@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -125,28 +125,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,30 +178,30 @@ import { useNavigate } from "react-router-dom";
 import { getUser } from '../../api/users.api';
 import { PedidoProductoCard } from './PedidoProductoCard';
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >PedidoCard(</span>{pedido}) {
+export function PedidoCard({pedido}) {
     
-        const navigate=<span class="cstat-no" title="statement not covered" >useNavigate();</span>
-        const [usuario, setUsuario] = <span class="cstat-no" title="statement not covered" >useState(null);</span>
+        const navigate=useNavigate();
+        const [usuario, setUsuario] = useState(null);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-        const fetchUser = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            try {</span>
-                const response = <span class="cstat-no" title="statement not covered" >await getUser(pedido.usuarios);</span>
-<span class="cstat-no" title="statement not covered" >                setUsuario(response.data);</span>
+    useEffect(() =&gt; {
+        const fetchUser = async () =&gt; {
+            try {
+                const response = await getUser(pedido.usuarios);
+                setUsuario(response.data);
             } catch (error) {
-<span class="cstat-no" title="statement not covered" >                console.error('Error fetching user:', error);</span>
+                console.error('Error fetching user:', error);
             }
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        fetchUser();</span>
+        fetchUser();
     }, [pedido.usuarios]);
     
-<span class="cstat-no" title="statement not covered" >        return (</span>
+        return (
             &lt;div className="bg-gray-100 text-black p-3 hover:bg-gray-300 
             hover:cursor-pointer rounded-lg transition duration-300"
 &nbsp;
-            onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;{
-<span class="cstat-no" title="statement not covered" >                navigate('/pedidosProductos/'+pedido.id+'/'+pedido.usuarios)</span>
+            onClick={()=&gt;{
+                navigate('/pedidosProductos/'+pedido.id+'/'+pedido.usuarios)
             }}
 &nbsp;
             &gt;
@@ -235,7 +235,7 @@ export function <span class="fstat-no" title="function not covered" >PedidoCard(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-20T03:16:16.275Z
+                at 2025-05-23T01:41:06.006Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

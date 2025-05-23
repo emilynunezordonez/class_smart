@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -114,29 +114,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,32 +154,32 @@ import { CarritoList } from "../../components/cliente/CarritoList"
 import { useParams } from "react-router-dom"
 import { Navigation } from '../../components/cliente/Navigation'
 import { NavigationCar } from "../../components/cliente/NavigationCar";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { searchUserProducts } from "../../api/products.api";
-export function <span class="fstat-no" title="function not covered" >CarritoPage(</span>) {
-  const params = <span class="cstat-no" title="statement not covered" >useParams();</span> // Obtén todos los parámetros como un objeto
-  const { id } = <span class="cstat-no" title="statement not covered" >params;</span>
-  const [total,setTotal]=<span class="cstat-no" title="statement not covered" >useState(0)</span>
+export function CarritoPage() {
+  const params = useParams(); // Obtén todos los parámetros como un objeto
+  const { id } = params;
+  const [total,setTotal]=useState(0)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span>=&gt;{</span>
-   async function <span class="fstat-no" title="function not covered" >loadUserProducts(</span>){
-<span class="cstat-no" title="statement not covered" >    try {</span>
-      const res=<span class="cstat-no" title="statement not covered" >await searchUserProducts(localStorage.getItem('user_id'))</span>
+  useEffect(()=&gt;{
+   async function loadUserProducts(){
+    try {
+      const res=await searchUserProducts(localStorage.getItem('user_id'))
 &nbsp;
-      const products=<span class="cstat-no" title="statement not covered" >res.data</span>
-      const total=<span class="cstat-no" title="statement not covered" >products.reduce(<span class="fstat-no" title="function not covered" >(a</span>cumulador,producto)=&gt;<span class="cstat-no" title="statement not covered" >acumulador+(producto.cantidad_user_producto*producto.precio),</span>0)</span>
-<span class="cstat-no" title="statement not covered" >      setTotal(total)</span>
+      const products=res.data
+      const total=products.reduce((acumulador,producto)=&gt;acumulador+(producto.cantidad_user_producto*producto.precio),0)
+      setTotal(total)
       
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >      console.log('Error al consultar los productos del usaurio',error)</span>
+      console.log('Error al consultar los productos del usaurio',error)
     }
    }
-<span class="cstat-no" title="statement not covered" >   loadUserProducts()</span>
+   loadUserProducts()
   },[])
 &nbsp;
   
  
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div&gt;
       
       &lt;NavigationCar total_global={total}/&gt;
@@ -199,7 +199,7 @@ export function <span class="fstat-no" title="function not covered" >CarritoPage
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-20T03:16:16.275Z
+                at 2025-05-23T01:41:06.006Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

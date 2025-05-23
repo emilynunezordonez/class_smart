@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import React, { useState, useEffect } from 'react';
-
-import { useNavigate } from "react-router-dom";
 import { getAllCategories } from "../../api/categories.api";
 import { ChevronDown, Search, Plus, LogOut, Filter } from 'lucide-react';
 import logo from '../../assets/logo/clasSmart.png'
@@ -49,10 +47,10 @@ export function Navigation() {
 
 
 
-  const toggleCategoryDropdown = (e) => {
+  /*const toggleCategoryDropdown = (e) => {
     e.stopPropagation();
     setIsCategoryDropdownOpen(!isCategoryDropdownOpen);
-  };
+  };*/
 
 
 
