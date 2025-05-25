@@ -30,6 +30,8 @@ dist-ssr
 
 # ignore coverage except Icov.info
 coverage/icov-report/*
+coverage/lcov-report/*
+**/lcov-report/*
 coverage/clover.xml
 coverage/coverage-final.json
 
