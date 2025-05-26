@@ -25,7 +25,7 @@ import LineasVentasDiarias from './pages/dashboard/LineasVentasDiarias'
 import { PedidosFilterPage } from './pages/pedidos/PedidosFilterPage'
 import { ClientFavorites } from './pages/cliente/ClientFavorites'
 import { Nosotros } from './pages/cliente/Nosotros'
-
+import React from 'react';
 
 
 function App() {

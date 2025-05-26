@@ -1,6 +1,7 @@
 import { UserList } from "../../components/users/UserList"
 import { useParams } from "react-router-dom"
 import { Navigation } from '../../components/users/Navigation'
+import React from 'react';
 
 export function UserPage() {
   const params = useParams(); // Obtén todos los parámetros como un objeto

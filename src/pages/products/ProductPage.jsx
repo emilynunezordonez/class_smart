@@ -1,6 +1,7 @@
 import { ProductList } from "../../components/products/ProductList"
 import { useNavigate, useParams } from "react-router-dom"
 import { Navigation } from '../../components/products/Navigation'
+import React from 'react';
 
 export function ProductPage() {
   const params = useParams(); // Obtén todos los parámetros como un objeto
