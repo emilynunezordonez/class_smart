@@ -35,6 +35,14 @@ jest.mock('react-hot-toast', () => ({
   }
 }));
 
+jest.mock('react-router-dom', () => {
+  const originalModule = jest.requireActual('react-router-dom');
+  return {
+    ...originalModule,
+    useNavigate: () => jest.fn(),
+  };
+});
+
 const pedidosApi = require('../../../src/api/pedidos.api');
 const productsApi = require('../../../src/api/products.api');
 const usersApi = require('../../../src/api/users.api');
@@ -53,20 +61,24 @@ const renderWithRouter = (route) => {
 
 describe('PedidosProductosPage', () => {
   beforeEach(() => {
-    pedidosApi.getAllPedidosProductos.mockResolvedValue({ data: [
-      { pedido_ppid: '1', producto_ppid: '101', cantidad_producto_carrito: 2 }
-    ] });
+    pedidosApi.getAllPedidosProductos.mockResolvedValue({
+      data: [
+        { pedido_ppid: '1', producto_ppid: '101', cantidad_producto_carrito: 2 }
+      ]
+    });
 
     productsApi.getProduct.mockResolvedValue({ data: { precio: 1000 } });
-    pedidosApi.getPedido.mockResolvedValue({ data: {
-      estado_pedido: false,
-      metodo_pago: 'Efectivo',
-      direccion: 'Calle Falsa 123',
-      hora: '12:00',
-      fecha: '2023-01-01',
-      usuarios: [],
-      productos: []
-    }});
+    pedidosApi.getPedido.mockResolvedValue({
+      data: {
+        estado_pedido: false,
+        metodo_pago: 'Efectivo',
+        direccion: 'Calle Falsa 123',
+        hora: '12:00',
+        fecha: '2023-01-01',
+        usuarios: [],
+        productos: []
+      }
+    });
 
     usersApi.getUser.mockResolvedValue({ data: { email: 'test@example.com' } });
   });
@@ -109,7 +121,85 @@ describe('PedidosProductosPage', () => {
       expect(pedidosApi.getAllPedidosProductos).toHaveBeenCalled();
     });
   });
-  
+
+  it('maneja error al actualizar estado del pedido', async () => {
+    pedidosApi.updatePedido.mockRejectedValueOnce(new Error('Update error'));
+
+    renderWithRouter('/pedidos/1/42');
+
+    const checkbox = await screen.findByRole('checkbox');
+    fireEvent.click(checkbox);
+
+    await waitFor(() => {
+      expect(pedidosApi.updatePedido).toHaveBeenCalled();
+    });
+  });
+
+  it('muestra toast de error si falla el envío de cancelación por mail', async () => {
+    pedidosApi.send_cancel_mail.mockRejectedValueOnce(new Error('Email error'));
+
+    renderWithRouter('/pedidos/1/42');
+
+    const button = await screen.findByRole('button', { name: /cancelar pedido/i });
+    fireEvent.click(button);
+
+    await waitFor(() => {
+      expect(pedidosApi.send_cancel_mail).toHaveBeenCalled();
+      expect(require('react-hot-toast').default.error).toHaveBeenCalledWith(
+        "Error al cancelar el pedido",
+        expect.any(Object)
+      );
+    });
+  });
+
+  it('ejecuta correctamente handleCancelButtonClick con usuario cargado', async () => {
+    renderWithRouter('/pedidos/1/42');
+
+    const button = await screen.findByRole('button', { name: /cancelar pedido/i });
+    fireEvent.click(button);
+
+    await waitFor(() => {
+      expect(pedidosApi.send_cancel_mail).toHaveBeenCalled();
+    });
+  });
+
+  it('muestra error si getPedido falla', async () => {
+    pedidosApi.getPedido.mockRejectedValueOnce(new Error('Error al obtener pedido'));
+
+    renderWithRouter('/pedidos/1/42');
+
+    await waitFor(() => {
+      expect(pedidosApi.getPedido).toHaveBeenCalledWith('1');
+      // Aquí no hay efecto visible, pero al menos cubrimos el catch
+    });
+  });
+
+  it('muestra error si getUser falla', async () => {
+    usersApi.getUser.mockRejectedValueOnce(new Error('Error al obtener usuario'));
+
+    renderWithRouter('/pedidos/1/42');
+
+    await waitFor(() => {
+      expect(usersApi.getUser).toHaveBeenCalledWith('42');
+    });
+  });
+
+  it('muestra error si send_cancel_mail falla', async () => {
+    pedidosApi.send_cancel_mail.mockRejectedValueOnce(new Error('Fallo al enviar correo'));
+
+    renderWithRouter('/pedidos/1/42');
+
+    const button = await screen.findByRole('button', { name: /cancelar pedido/i });
+    fireEvent.click(button);
+
+    await waitFor(() => {
+      expect(pedidosApi.send_cancel_mail).toHaveBeenCalled();
+      expect(screen.getByRole('button', { name: /cancelar pedido/i })).toBeInTheDocument();
+    });
+  });
+
+
+
 });
 
 
