@@ -3,7 +3,7 @@ import { login } from '../../api/users.api'
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom"
 import logo from '../../assets/logo/clasSmart.png'
-
+import React from 'react';
 
 
 
