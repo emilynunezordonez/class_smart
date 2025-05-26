@@ -83,6 +83,7 @@ export function Navigation() {
           {/* Ícono de Búsqueda */}
           <div
             className="cursor-pointer"
+            aria-label="Abrir búsqueda"
             onClick={() => setIsSearchOpen(!isSearchOpen)}
           >
             <Search size={24} />
@@ -131,6 +132,7 @@ export function Navigation() {
       {/* Botón de Salir */}
       <div className="fixed bottom-4 left-4">
         <button
+          aria-label="Cerrar sesión"
           className="text-white p-2 rounded-full shadow-lg transition duration-300 transform hover:scale-110"
           style={{ backgroundColor: "#0FA0CC" }}
           onClick={() => {
@@ -146,6 +148,7 @@ export function Navigation() {
       <div className="fixed bottom-4 right-4">
         <div className="relative">
           <button
+            aria-label="Abrir menú de acciones"
             className="text-white p-4 rounded-full shadow-lg transition duration-300 transform hover:scale-110"
             style={{ backgroundColor: "#0FA0CC" }}
             onClick={toggleUserDropdown}
