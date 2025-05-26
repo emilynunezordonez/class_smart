@@ -4,6 +4,11 @@ import { PedidosFilterPage } from '../../../src/pages/pedidos/PedidosFilterPage'
 import * as pedidosApi from '../../../src/api/pedidos.api';
 import React from 'react';
 
+jest.mock('../../../src/pages/cliente/ClientFavorites', () => ({
+  __esModule: true,
+  default: () => <div data-testid="client-favorites" />,
+}));
+
 // Mock de componentes hijos
 jest.mock('../../../src/components/pedidos/Navigation', () => ({
   Navigation: () => <div data-testid="navigation" />,

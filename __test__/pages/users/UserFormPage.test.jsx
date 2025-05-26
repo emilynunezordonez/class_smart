@@ -39,13 +39,13 @@ describe('UserFormPage', () => {
     useNavigate.mockReturnValue(mockNavigate);
   });
 
-  it('renderiza formulario de creación', () => {
+  test('renderiza formulario de creación', () => {
     useParams.mockReturnValue({});
     render(<UserFormPage />);
     expect(screen.getByPlaceholderText('Username')).toBeInTheDocument();
   });
 
-  it('envía formulario y registra nuevo usuario exitosamente', async () => {
+  test('envía formulario y registra nuevo usuario exitosamente', async () => {
     useParams.mockReturnValue({});
     registerUser.mockResolvedValue({});
     render(<UserFormPage />);
@@ -58,7 +58,7 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('muestra error al registrar usuario', async () => {
+  test('muestra error al registrar usuario', async () => {
     useParams.mockReturnValue({});
     registerUser.mockRejectedValue({ response: { data: { detail: 'Error' } } });
     render(<UserFormPage />);
@@ -69,7 +69,7 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('renderiza formulario de edición y carga datos', async () => {
+  test('renderiza formulario de edición y carga datos', async () => {
     useParams.mockReturnValue({ id: '1' });
     getUser.mockResolvedValue({
       data: { username: 'admin', email: 'admin@example.com', is_staff: true, is_superuser: false }
@@ -80,7 +80,7 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('actualiza usuario exitosamente', async () => {
+  test('actualiza usuario exitosamente', async () => {
     useParams.mockReturnValue({ id: '1' });
     getUser.mockResolvedValue({
       data: { username: 'admin', email: 'admin@example.com', is_staff: true, is_superuser: false }
@@ -96,7 +96,7 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('muestra error al actualizar usuario', async () => {
+  test('muestra error al actualizar usuario', async () => {
     useParams.mockReturnValue({ id: '1' });
     getUser.mockResolvedValue({
       data: { username: 'admin', email: 'admin@example.com', is_staff: true, is_superuser: false }
@@ -110,7 +110,7 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('elimina usuario exitosamente', async () => {
+  test('elimina usuario exitosamente', async () => {
     useParams.mockReturnValue({ id: '1' });
     getUser.mockResolvedValue({
       data: { username: 'admin', email: 'admin@example.com', is_staff: true, is_superuser: false }
@@ -128,7 +128,7 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('muestra error al eliminar usuario', async () => {
+  test('muestra error al eliminar usuario', async () => {
     useParams.mockReturnValue({ id: '1' });
     getUser.mockResolvedValue({
       data: { username: 'admin', email: 'admin@example.com', is_staff: true, is_superuser: false }
@@ -143,7 +143,7 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('muestra error si las contraseñas no coinciden', async () => {
+  test('muestra error si las contraseñas no coinciden', async () => {
     useParams.mockReturnValue({});
     render(<UserFormPage />);
     fireEvent.change(screen.getByPlaceholderText('Password'), { target: { value: '1234' } });
@@ -154,10 +154,31 @@ describe('UserFormPage', () => {
     });
   });
 
-  it('navega al hacer clic en "Back"', () => {
+  test('navega al hacer clic en "Back"', () => {
     useParams.mockReturnValue({});
     render(<UserFormPage />);
     fireEvent.click(screen.getByText('Back'));
     expect(mockNavigate).toHaveBeenCalledWith('/users');
   });
+
+  test('permite formulario si no se cambia la contraseña en edición', async () => {
+    useParams.mockReturnValue({ id: '1' });
+    getUser.mockResolvedValue({
+      data: { username: 'admin', email: 'admin@example.com', is_staff: true, is_superuser: false }
+    });
+    updateUser.mockResolvedValue({});
+
+    render(<UserFormPage />);
+    await waitFor(() => {
+      expect(screen.getByPlaceholderText('Username')).toBeInTheDocument();
+    });
+
+    fireEvent.click(screen.getByText('Save'));
+
+    await waitFor(() => {
+      expect(updateUser).toHaveBeenCalled();
+      expect(toast.success).toHaveBeenCalledWith('Usuario actualizado correctamente', expect.anything());
+    });
+  });
+
 });

@@ -120,4 +120,21 @@ describe('LoginFormPage', () => {
     fireEvent.click(screen.getByText('Regístrate'));
     expect(mockedNavigate).toHaveBeenCalledWith('/register-user');
   });
+
+  it('no navega ni guarda si no se recibe token', async () => {
+    login.mockResolvedValue({
+      data: { user: { id: '123', is_staff: true } } // sin token
+    });
+
+    setup();
+
+    fireEvent.change(screen.getByPlaceholderText('Username'), { target: { value: 'admin' } });
+    fireEvent.change(screen.getByPlaceholderText('Password'), { target: { value: 'adminpass' } });
+    fireEvent.click(screen.getByText('LogIn'));
+
+    await waitFor(() => {
+      expect(localStorage.getItem('authToken')).toBe(null);
+      expect(mockedNavigate).not.toHaveBeenCalled();
+    });
+  });
 });
